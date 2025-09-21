@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="todo.html">To-Do App</a>
+  </nav>
+
+  <section>
+    <h2>Product Page (Filter & Sort)</h2>
+
+    <!-- Controls -->
+    <label>Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+    </select>
+
+    <label>Sort by:</label>
+    <select id="sortOption" onchange="sortProducts()">
+      <option value="default">Default</option>
+      <option value="priceLowHigh">Price: Low to High</option>
+      <option value="priceHighLow">Price: High to Low</option>
+      <option value="ratingHighLow">Rating: High to Low</option>
+    </select>
+
+    <!-- Product List -->
+    <div id="productList" class="products"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
